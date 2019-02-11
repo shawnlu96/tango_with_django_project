@@ -7,12 +7,14 @@
 
 {% block body_block %}
      This tutorial has been put together by Xiaoyu Lu.
-    <p>Times you visit: {{ visits }}</p>
         <div>
             {{ aboutmessage }} <br />
             <img src="{% static "images/rango_about.jpg" %}"
                  alt="Picture of Rango in the about page" />
             <img src="{{ MEDIA_URL }}cat.jpg"
                  alt="Cat media image" />
+        {% if visits %}
+            visits: {{ visits }}
+        {% endif %}
         </div>
 {% endblock %}

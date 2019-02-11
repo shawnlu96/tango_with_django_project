@@ -13,10 +13,13 @@
         {% else %}
             hey there partner!
         {% endif %}
-        <p>Times you visit: {{ visits }}</p>
         </div>
 
         <div>
+        {% if visits %}
+            visits: {{ visits }}
+        {% endif %}
+
             <h2>Most Liked Categories</h2>
             {% if categories %}
             <ul>
