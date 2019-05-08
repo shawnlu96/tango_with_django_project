@@ -68,6 +68,8 @@ def add_category(request):
 def add_page(request, category_name_slug):
     try:
         category = Category.objects.get(slug=category_name_slug)
+        category_list = Category.objects.order_by('-name')
+        print(category_list)
     except Category.DoesNotExist:
         category = None
     form = PageForm()
